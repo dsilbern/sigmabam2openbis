@@ -3,7 +3,7 @@ MAPPING_COLUMNS = {
     "Handelsname": "name",
     "Synonyme": "alias",
     "CAS-Nr": "cas_number",
-    "Hersteller": "manufacturer",
+    "Lieferant": "manufacturer",
     "Konzentration [%]": "concentration",
     "Dichte [g/cm\u00b3]": "density_gram_per_cubic_cm",
 }

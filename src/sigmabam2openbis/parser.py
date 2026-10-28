@@ -57,7 +57,7 @@ class SigmaBAM2OpenBISParser(AbstractParser):
 
                 # Code establishes if the object Chemical exists or not in the database
                 # and either creates or updates it
-                entity = self.get_value_as_str(chemical_row.get("Organisationseinheit"))
+                entity = self.get_value_as_str(chemical_row.get("OE"))
                 if entity:
                     code = f"CHEM-{entity}-{umgang_id}"
                     chemical.code = code
@@ -133,7 +133,7 @@ class SigmaBAM2OpenBISParser(AbstractParser):
 
                 # Complete BAM location
                 bam_location_complete = []
-                for col in ["Liegenschaft", "Haus", "Etage", "Raum-Nr"]:
+                for col in ["Liegenschaft", "Haus", "Etage", "Raum"]:
                     val = self.get_value_as_str(chemical_row.get(col))
                     if not val:
                         logger.warning(

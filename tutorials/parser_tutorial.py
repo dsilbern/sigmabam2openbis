@@ -6,7 +6,7 @@ from pybis import Openbis
 
 from sigmabam2openbis.parser import SigmaBAM2OpenBISParser
 
-URL = "https://your-openbis-instance.com"  # openBIS URL
+URL = "https://main.datastore.bam.de/openbis"
 print(f"Connecting to openBIS instance at {URL}...")
 openbis = Openbis(URL)
 username = input("Username: ")
@@ -23,9 +23,9 @@ files_parser = {
 # Run the parser
 parsing = RunParsers(
     openbis=openbis,
-    space_name="<SPACE-NAME>",
-    project_name="<PROJECT-NAME>",
-    collection_name="<COLLECTION-NAME>",  # optional
+    space_name="6.2_MATERIALS",
+    project_name="CHEMICALS",
+    collection_name="SigmaImport",  # optional
     files_parser=files_parser,
     logger=logger,
 )
